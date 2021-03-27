@@ -1,0 +1,6 @@
+---
+- hosts: webservers
+  become: true
+  tasks:
+  - name: Create directory
+    file: path=/home/ansible/mydirectory state=directory mode=775 owner=ansible group=ansible

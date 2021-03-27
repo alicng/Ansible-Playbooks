@@ -1,0 +1,6 @@
+---
+- hosts: webservers
+  become: true
+  tasks:
+  - name: Create User
+    user: name=myuser password=password groups=ansible shell=/bin/bash

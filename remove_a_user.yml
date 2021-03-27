@@ -1,0 +1,7 @@
+---
+- hosts: webservers
+  become: true
+  tasks:
+  - name: Remove User
+    user:
+    name=myuser state=absent remove=yes force=yes
